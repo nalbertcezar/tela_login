@@ -1,0 +1,24 @@
+<meta charset="UTF-8">
+<script>
+
+    var loginCadastrado = "github";
+    var senhaCadastrada = "github123";
+    var maximoTentativa = 3
+    var tentativaAtual = 1
+    while(tentativaAtual <= maximoTentativa){
+        var loginInformado = prompt("Informe seu login");
+        var senhaInformada = prompt("Informe sua senha");
+        if(loginInformado == loginCadastrado && senhaInformada == senhaCadastrada){
+            alert("Bem vindo(a) a Alura, " + loginCadastrado + "!")       
+        tentativaAtual = maximoTentativa
+        }else{
+            if(tentativaAtual == maximoTentativa){
+            alert("Você esgotou seu número de tentativas!");         
+            }else{
+        alert("Login inválido. Tente novamente.");
+            }
+        }  
+        tentativaAtual++
+    }
+
+</script>
